@@ -1,4 +1,6 @@
-
+mkdir -m 777 folder1
+cd folder1
+cp /home/vsts/work/1/s/target/addressbook.war .
 FROM centos:latest
 # Creating Author name 
 Maintainer "abc"
@@ -13,7 +15,7 @@ RUN wget https://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.63/bin/apac
 # Extract the package of Tomcat 
 RUN tar -xvzf apache-tomcat-8.5.63.tar.gz
 # Deploy the war 
-ADD /home/vsts/work/1/s/target/addressbook.war /apache-tomcat-8.5.63/webapps
+ADD addressbook.war /apache-tomcat-8.5.63/webapps
 # Run the catalina service 
 CMD "/bin/catalina.sh"
 # create the port number
