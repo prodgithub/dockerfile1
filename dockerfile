@@ -1,5 +1,3 @@
-mkdir -m 777 folder1
-cd folder1
 cp /home/vsts/work/1/s/target/addressbook.war .
 FROM centos:latest
 # Creating Author name 
